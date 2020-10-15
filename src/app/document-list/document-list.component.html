@@ -1,0 +1,7 @@
+<div class='sidenav'>
+    <span (click)='newDoc()'>New Document</span>
+    <div [class.selected]='docId === currentDoc.id' *ngFor='let docId of documents | async'>
+        <span (click)='loadDoc(docId)'>{{ docId }}</span>
+        <button (click)='delDoc(docId)'>DEL</button>
+    </div>
+</div>
